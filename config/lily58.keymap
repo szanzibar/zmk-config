@@ -1,8 +1,10 @@
-#include "dvorak_qwerty.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+
+#include "dvorak_qwerty.dtsi"
+#include "custom_behaviors.dtsi"
 
 / {
 	keymap {
@@ -11,18 +13,18 @@
 		default_layer {
 			bindings = <
 // ┌────────┬────────┬────────┬────────┬────────┬────────┐                   ┌────────┬────────┬────────┬────────┬────────┬────────┐
-    &kp ESC   &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                       &kp N6   &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
+    &kp ESC  &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                       &kp N6   &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
 // ├────────┼────────┼────────┼────────┼────────┼────────┤                   ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &kp TAB   &SQT_Q  &COMMA_W  &DOT_E  &P_R     &Y_T                         &F_Y     &G_U     &C_I     &R_O     &L_P     &kp SLASH
+    &kp TAB  &SQT_Q   &COMMA_W &DOT_E   &P_R     &Y_T                         &F_Y     &G_U     &C_I     &R_O     &L_P     &kp SLASH
 // ├────────┼────────┼────────┼────────┼────────┼────────┤                   ├────────┼────────┼────────┼────────┼────────┼────────┤
-    &kp LSHFT &kp A   &O_S     &E_D     &U_F     &I_G                         &D_H     &H_J     &T_K     &N_L     &S_SEMI  &kp SQT
+   &kp LSHFT &kp A    &O_S     &E_D     &U_F     &I_G                         &D_H     &H_J     &T_K     &N_L     &S_SEMI  &kp SQT
 // ├────────┼────────┼────────┼────────┼────────┼────────┼────────┐ ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-    &kp LCTRL &SEMI_Z  &Q_X    &J_C     &K_V    &X_B      &kp LBKT   &kp RBKT &B_N     &kp M    &W_COMMA &V_DOT   &Z_SLASH &kp RSHFT
+   &kp LCTRL &semi_med 2 &Q_X  &J_C     &K_V     &X_B     &tog 2     &tog 3   &B_N     &kp M    &W_COMMA &V_DOT   &Z_SLASH &kp RSHFT
 // └────────┴────────┴────────┼────────┼────────┼────────┼────────┤ ├────────┼────────┼────────┼────────┼────────┴────────┴────────┘
-                               &kp LALT &kp LGUI &mo 1    &kp SPACE  &kp RET  &mo 2    &kp BSPC &kp RGUI
+                               &kp LALT &kp LGUI &kp DEL  &kp BSPC   &kp SPACE &kp RET &mo 2    &kp RGUI
                            // └────────┴────────┴────────┴────────┘ └────────┴────────┴────────┴────────┘
 			>;
-
+            
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 
