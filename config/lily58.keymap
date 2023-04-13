@@ -6,6 +6,8 @@
 #include "dvorak_qwerty.dtsi"
 #include "custom_behaviors.dtsi"
 
+#define SEMI_MED &semi_med 2 0
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -19,7 +21,7 @@
 // ├────────┼────────┼────────┼────────┼────────┼────────┤                   ├────────┼────────┼────────┼────────┼────────┼────────┤
    &kp LSHFT &kp A    &O_S     &E_D     &U_F     &I_G                         &D_H     &H_J     &T_K     &N_L     &S_SEMI  &kp SQT
 // ├────────┼────────┼────────┼────────┼────────┼────────┼────────┐ ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-   &kp LCTRL &semi_med 2 &Q_X  &J_C     &K_V     &X_B     &tog 2     &tog 3   &B_N     &kp M    &W_COMMA &V_DOT   &Z_SLASH &kp RSHFT
+   &kp LCTRL SEMI_MED &Q_X  &J_C     &K_V     &X_B     &tog 2     &tog 3   &B_N     &kp M    &W_COMMA &V_DOT   &Z_SLASH &kp RSHFT
 // └────────┴────────┴────────┼────────┼────────┼────────┼────────┤ ├────────┼────────┼────────┼────────┼────────┴────────┴────────┘
                                &kp LALT &kp LGUI &kp DEL  &kp BSPC   &kp SPACE &kp RET &mo 2    &kp RGUI
                            // └────────┴────────┴────────┴────────┘ └────────┴────────┴────────┴────────┘
