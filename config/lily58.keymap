@@ -9,7 +9,6 @@
 #define SEMI_MED &semi_med 2 0
 #define DASH_SYM &dash_sym 1 MINUS
 #define Z_MED &dash_sym 1 Z
-#define R_CAG(keycode) RC(RA(RG(keycode)))
 #define BT(profile) &bt BT_SEL profile
 
 / {
@@ -27,7 +26,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B      &to 1       &to 2     &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   R_CAG     &to 0
+                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   &r_cag    &to 0
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};

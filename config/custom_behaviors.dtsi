@@ -27,5 +27,11 @@
             tapping-term-ms = <175>;
             bindings = <&mo>, <&kp>;
         };
+        r_cag: r_ctrl_alt_gui {
+			compatible = "zmk,modified-key-press";
+			label = "R_CTRL_ALT_GUI";
+			#binding-cells = <1>;
+			modifiers = MOD_RGUI | MOD_RALT | MOD_RCTL;
+		}; 
     };
 };
