@@ -1,0 +1,232 @@
+// Behaviors for dvorak layout, qwerty keyboard shortcuts
+
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+	behaviors {
+        SQT_Q: SINGLE_QUOTE_Q {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SINGLE_QUOTE_Q";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp Q>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        COMMA_W: COMMA_W {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_W";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp W>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        DOT_E: PERIOD_E {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERIOD_E";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp E>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        P_R: P_R {
+            compatible = "zmk,behavior-mod-morph";
+            label = "P_R";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&kp R>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        Y_T: Y_T {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Y_T";
+            #binding-cells = <0>;
+            bindings = <&kp Y>, <&kp T>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        F_Y: F_Y {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F_Y";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp Y>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        G_U: G_U {
+            compatible = "zmk,behavior-mod-morph";
+            label = "G_U";
+            #binding-cells = <0>;
+            bindings = <&kp G>, <&kp U>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        C_I: C_I {
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_I";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp I>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        R_O: R_O {
+            compatible = "zmk,behavior-mod-morph";
+            label = "R_O";
+            #binding-cells = <0>;
+            bindings = <&kp R>, <&kp O>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        L_P: L_P {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L_P";
+            #binding-cells = <0>;
+            bindings = <&kp L>, <&kp P>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        O_S: O_S {
+            compatible = "zmk,behavior-mod-morph";
+            label = "O_S";
+            #binding-cells = <0>;
+            bindings = <&kp O>, <&kp S>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        E_D: E_D {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_D";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp D>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        U_F: U_F {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_F";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&kp F>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        I_G: I_G {
+            compatible = "zmk,behavior-mod-morph";
+            label = "I_G";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kp G>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        D_H: D_H {
+            compatible = "zmk,behavior-mod-morph";
+            label = "D_H";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp H>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        H_J: H_J {
+            compatible = "zmk,behavior-mod-morph";
+            label = "H_J";
+            #binding-cells = <0>;
+            bindings = <&kp H>, <&kp J>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        T_K: T_K {
+            compatible = "zmk,behavior-mod-morph";
+            label = "T_K";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&kp K>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        N_L: N_L {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N_L";
+            #binding-cells = <0>;
+            bindings = <&kp N>, <&kp L>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        S_SEMI: S_SEMICOLON {
+            compatible = "zmk,behavior-mod-morph";
+            label = "S_SEMICOLON";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp SEMICOLON>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        SEMI_Z: SEMICOLON_Z {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMICOLON_Z";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp Z>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        Q_X: Q_X {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Q_X";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp X>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        J_C: J_C {
+            compatible = "zmk,behavior-mod-morph";
+            label = "J_C";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&kp C>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        K_V: K_V {
+            compatible = "zmk,behavior-mod-morph";
+            label = "K_V";
+            #binding-cells = <0>;
+            bindings = <&kp K>, <&kp V>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        X_B: X_B {
+            compatible = "zmk,behavior-mod-morph";
+            label = "X_B";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&kp B>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        B_N: B_N {
+            compatible = "zmk,behavior-mod-morph";
+            label = "B_N";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp N>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        W_COMMA: W_COMMA {
+            compatible = "zmk,behavior-mod-morph";
+            label = "W_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp COMMA>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        V_DOT: V_PERIOD {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_PERIOD";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp PERIOD>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+        Z_SLASH: Z_SLASH {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Z_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&kp SLASH>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+    };
+};
