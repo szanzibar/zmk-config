@@ -1,0 +1,39 @@
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    macros {
+        o_lower_umlaut: o_lower_umlaut {
+            label = "o_lower_umlaut";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N8>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        o_upper_umlaut: o_upper_umlaut {
+            label = "o_upper_umlaut";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
+    behaviors {
+            O_UMLAUT: O_UMLAUT {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_PERIOD";
+            #binding-cells = <0>;
+            bindings = <&o_lower_umlaut>, <&o_upper_umlaut>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};

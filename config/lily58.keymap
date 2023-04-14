@@ -5,13 +5,28 @@
 
 #include "dvorak_qwerty.dtsi"
 #include "custom_behaviors.dtsi"
+#include "macros.dtsi"
 
-#define SEMI_MED &semi_med 2 0
-#define DASH_SYM &dash_sym 1 MINUS
-#define Z_MED &dash_sym 1 Z
+#define DVORAK  0
+#define SYMBOLS 1
+#define MEDIA   2
+#define MACROS  3
+#define GAMING  4
+
+#define SEMI_MED &semi_med MEDIA 0
+#define DASH_SYM &dash_sym SYMBOLS MINUS
+#define Z_MED &dash_sym MEDIA Z
 #define BT(profile) &bt BT_SEL profile
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            bindings = <&kp CAPS>;  
+        };
+    };
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -24,9 +39,9 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LSHFT &kp A     &O_S      &E_D      &U_F      &I_G                            &D_H      &H_J      &T_K      &N_L      &S_SEMI   DASH_SYM
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B      &to 1       &to 2     &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
+    &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B     &to SYMBOLS  &to MEDIA &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   &kp RALT  &to 0
+                                  &kp A     &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   &mo MACROS &to DVORAK
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};
@@ -59,6 +74,22 @@
     &trans    &trans  &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &trans  &trans   &kp KP_DOT &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT  &trans
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                   &trans    &trans    &trans    &trans      &trans    &trans    &kp KP_N0 &trans
+                              // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
+			>;
+		};
+
+        macros_layer {
+			bindings = <
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+    &trans    &trans    &trans    &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+    &trans    &trans    &trans    &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+    &trans    &trans    &O_UMLAUT &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
+// └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
+                                  &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};
