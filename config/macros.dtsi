@@ -2,12 +2,36 @@
 
 / {
     macros {
+        a_lower_umlaut: a_lower_umlaut {
+            label = "a_lower_umlaut";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N1 &kp KP_N3 &kp KP_N2>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        a_upper_umlaut: a_upper_umlaut {
+            label = "a_upper_umlaut";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N2>
+                , <&macro_release &kp LALT>
+                ;
+        };
         o_lower_umlaut: o_lower_umlaut {
             label = "o_lower_umlaut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press   &kp LALT>
                 , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N8>
@@ -18,23 +42,49 @@
             label = "o_upper_umlaut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             bindings
-                = <&macro_release &kp MOD_RSFT>
-                , <&macro_press   &kp LALT>
+                = <&macro_press   &kp LALT>
                 , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N3>
                 , <&macro_release &kp LALT>
                 ;
         };
-    };
-    behaviors {
-        O_UMLAUT: O_UMLAUT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V_PERIOD";
+        u_lower_umlaut: u_lower_umlaut {
+            label = "u_lower_umlaut";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&o_lower_umlaut>, <&o_upper_umlaut>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N9>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        u_upper_umlaut: u_upper_umlaut {
+            label = "u_upper_umlaut";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N4>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        sharp_s: sharp_s {
+            label = "sharp_s";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N2 &kp KP_N2 &kp KP_N5>
+                , <&macro_release &kp LALT>
+                ;
         };
     };
 };

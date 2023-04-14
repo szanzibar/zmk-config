@@ -1,0 +1,60 @@
+#include <dt-bindings/zmk/keys.h>
+#include "macros.dtsi"
+
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+//  0         1         2         3         4         5                               6         7         8         9         10        11
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+//  12        13        14        15        16        17                              18        19        20        21        22        23
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+//  24        25        26        27        28        29                              30        31        32        33        34        35
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+//  36        37        38        39        40        41        42          43        44        45        46        47        48        49
+// └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
+                              //  50        51        52        53          54        55        56        57
+                              // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <24 25>; // LSHIFT A
+            bindings = <&kp CAPS>;  
+        };
+        combo_a_umlaut_lower {
+            timeout-ms = <50>;
+            key-positions = <25 56>; // A, MACROS
+            bindings = <&a_lower_umlaut>;  
+        };
+        combo_a_umlaut_upper {
+            timeout-ms = <50>;
+            key-positions = <25 49 56>; // A, RSHIFT, MACROS
+            bindings = <&a_upper_umlaut>;  
+        };
+        combo_o_umlaut_lower {
+            timeout-ms = <50>;
+            key-positions = <26 56>; // O, MACROS
+            bindings = <&o_lower_umlaut>;  
+        };
+        combo_o_umlaut_upper {
+            timeout-ms = <50>;
+            key-positions = <26 49 56>; // O, RSHIFT, MACROS
+            bindings = <&o_upper_umlaut>;  
+        };
+        combo_u_umlaut_lower {
+            timeout-ms = <50>;
+            key-positions = <28 56>; // U, MACROS
+            bindings = <&u_lower_umlaut>;  
+        };
+        combo_u_umlaut_upper {
+            timeout-ms = <50>;
+            key-positions = <28 49 56>; // U, RSHIFT, MACROS
+            bindings = <&u_upper_umlaut>;  
+        };
+        combo_sharp_s {
+            timeout-ms = <50>;
+            key-positions = <34 56>; // S, MACROS
+            bindings = <&sharp_s>;  
+        };
+    };
+};

@@ -25,7 +25,15 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <175>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&Z_SLASH>;
+        };
+        kp_kp_hold_tap: kp_kp_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "kp_kp_hold_tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <175>;
+            bindings = <&kp>, <&kp>;
         };
     };
 };

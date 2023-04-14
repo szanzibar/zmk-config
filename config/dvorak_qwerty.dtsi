@@ -220,5 +220,13 @@
             mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
             keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
         };
+        Z_SLASH: Z_SLASH {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Z_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&kp SLASH>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
     };
 };

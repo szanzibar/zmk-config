@@ -7,6 +7,7 @@
 #include "dvorak_qwerty.dtsi"
 #include "custom_behaviors.dtsi"
 #include "macros.dtsi"
+#include "combos.dtsi"
 
 #define DVORAK  0
 #define SYMBOLS 1
@@ -16,18 +17,11 @@
 
 #define SEMI_MED &semi_med MEDIA 0
 #define DASH_SYM &dash_sym SYMBOLS MINUS
-#define Z_MED &dash_sym MEDIA Z
+#define Z_MED &z_med MEDIA 0
 #define BT(profile) &bt BT_SEL profile
+#define DEL_ALT &kp_kp_hold_tap LALT DEL
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_caps {
-            timeout-ms = <50>;
-            key-positions = <24 25>;
-            bindings = <&kp CAPS>;  
-        }; 
-    };
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -40,9 +34,9 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LSHFT &kp A     &O_S      &E_D      &U_F      &I_G                            &D_H      &H_J      &T_K      &N_L      &S_SEMI   DASH_SYM
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B     &to SYMBOLS  &to MEDIA &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
+    &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B     &to MEDIA  &to SYMBOLS &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &kp A     &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   &mo MACROS &to DVORAK
+                                  &kp LGUI  &kp LGUI  DEL_ALT   &kp BSPC    &kp SPACE &kp RET  &mo MACROS &to DVORAK
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>; 
 		};
@@ -86,7 +80,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &trans    &trans    &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &trans    &trans    &O_UMLAUT &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
