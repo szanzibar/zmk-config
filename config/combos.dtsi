@@ -21,40 +21,20 @@
             key-positions = <24 25>; // LSHIFT A
             bindings = <&kp CAPS>;  
         };
-        combo_a_umlaut_lower {
-            timeout-ms = <50>;
-            key-positions = <25 56>; // A, MACROS
-            bindings = <&a_lower_umlaut>;  
-        };
         combo_a_umlaut_upper {
             timeout-ms = <50>;
-            key-positions = <25 49 56>; // A, RSHIFT, MACROS
+            key-positions = <25 56>; // A, MACROS
             bindings = <&a_upper_umlaut>;  
-        };
-        combo_o_umlaut_lower {
-            timeout-ms = <50>;
-            key-positions = <26 56>; // O, MACROS
-            bindings = <&o_lower_umlaut>;  
         };
         combo_o_umlaut_upper {
             timeout-ms = <50>;
-            key-positions = <26 49 56>; // O, RSHIFT, MACROS
+            key-positions = <26 56>; // O, MACROS
             bindings = <&o_upper_umlaut>;  
-        };
-        combo_u_umlaut_lower {
-            timeout-ms = <50>;
-            key-positions = <28 56>; // U, MACROS
-            bindings = <&u_lower_umlaut>;  
         };
         combo_u_umlaut_upper {
             timeout-ms = <50>;
-            key-positions = <28 49 56>; // U, RSHIFT, MACROS
+            key-positions = <28 56>; // U, MACROS
             bindings = <&u_upper_umlaut>;  
-        };
-        combo_sharp_s {
-            timeout-ms = <50>;
-            key-positions = <34 56>; // S, MACROS
-            bindings = <&sharp_s>;  
         };
     };
 };

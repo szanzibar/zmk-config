@@ -2,7 +2,7 @@
 
 / {
     macros {
-        a_lower_umlaut: a_lower_umlaut {
+        a_um: a_lower_umlaut {
             label = "a_lower_umlaut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -26,7 +26,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        o_lower_umlaut: o_lower_umlaut {
+        o_um: o_lower_umlaut {
             label = "o_lower_umlaut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -50,7 +50,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        u_lower_umlaut: u_lower_umlaut {
+        u_um: u_lower_umlaut {
             label = "u_lower_umlaut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -74,7 +74,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        sharp_s: sharp_s {
+        ss: sharp_s {
             label = "sharp_s";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
