@@ -36,5 +36,25 @@
             key-positions = <28 56>; // U, MACROS
             bindings = <&u_upper_umlaut>;  
         };
+        combo_r_dash_arrow {
+            timeout-ms = <50>;
+            key-positions = <15 35>;
+            bindings = <&r_dash_arrow>;  
+        };
+        combo_l_dash_arrow {
+            timeout-ms = <50>;
+            key-positions = <14 35>;
+            bindings = <&l_dash_arrow>;  
+        };
+        combo_r_equals_arrow {
+            timeout-ms = <50>;
+            key-positions = <14 15 35>;
+            bindings = <&r_equals_arrow>;  
+        };
+        combo_l_equals_arrow {
+            timeout-ms = <50>;
+            key-positions = <13 14 35>;
+            bindings = <&l_equals_arrow>;  
+        };
     };
 };

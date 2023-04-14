@@ -86,5 +86,25 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        ZMK_MACRO(r_dash_arrow,
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+        );
+        ZMK_MACRO(l_dash_arrow,
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings = <&kp LESS_THAN &kp MINUS>;
+        );
+        ZMK_MACRO(r_equals_arrow,
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings = <&kp EQUAL &kp GREATER_THAN>;
+        );
+        ZMK_MACRO(l_dash_arrow,
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings = <&kp LESS_THAN &kp EQUAL>;
+        );
     };
 };

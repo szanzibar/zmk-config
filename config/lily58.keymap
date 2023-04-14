@@ -19,7 +19,6 @@
 #define DASH_SYM &dash_sym SYMBOLS MINUS
 #define Z_MED &z_med MEDIA 0
 #define BT(profile) &bt BT_SEL profile
-#define DEL_ALT &kp_kp_hold_tap LALT DEL
 
 / {
 	keymap {
@@ -36,7 +35,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B     &to MEDIA  &to SYMBOLS &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &kp LGUI  &kp LGUI  DEL_ALT   &kp BSPC    &kp SPACE &kp RET  &mo MACROS &to DVORAK
+                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET  &mo MACROS &to DVORAK
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>; 
 		};
