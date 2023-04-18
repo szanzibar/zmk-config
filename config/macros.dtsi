@@ -86,25 +86,37 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        ZMK_MACRO(r_dash_arrow,
+        r_dash_arrow: r_dash_arrow {
+            label = "r_dash_arrow";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
             bindings = <&kp MINUS &kp GREATER_THAN>;
-        );
-        ZMK_MACRO(l_dash_arrow,
+        };
+        l_dash_arrow: l_dash_arrow {
+            label = "l_dash_arrow";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
             bindings = <&kp LESS_THAN &kp MINUS>;
-        );
-        ZMK_MACRO(r_equals_arrow,
+        };
+        r_equals_arrow: r_equals_arrow {
+            label = "r_equals_arrow";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
             bindings = <&kp EQUAL &kp GREATER_THAN>;
-        );
-        ZMK_MACRO(l_dash_arrow,
+        };
+        l_equals_arrow: l_equals_arrow {
+            label = "l_equals_arrow";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
             bindings = <&kp LESS_THAN &kp EQUAL>;
-        );
+        };
     };
 };
