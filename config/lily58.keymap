@@ -8,6 +8,7 @@
 #include "combos.dtsi"
 #include "dvorak_qwerty.dtsi"
 #include "custom_behaviors.dtsi"
+#include "mouse.dtsi"
 
 #define DVORAK  0
 #define SYMBOLS 1
@@ -19,6 +20,7 @@
 #define DASH_SYM &dash_sym SYMBOLS MINUS
 #define Z_MED &z_med MEDIA 0
 #define BT(profile) &bt BT_SEL profile
+#define MT_MACROS &mo_tog MACROS MACROS
 
 / {
 	keymap {
@@ -35,7 +37,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B     &to MEDIA  &to SYMBOLS &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET  &mo MACROS &to DVORAK
+                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   MT_MACROS &to DVORAK
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>; 
 		};
@@ -77,13 +79,13 @@
 // ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
     &trans    &trans    &trans    &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &trans    &trans    &trans    &trans    &trans    &trans                          &trans    &trans    &trans    &trans    &trans    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans                          &trans    U_WH_D    U_MS_U    U_WH_U    &trans    &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &trans    &a_um     &o_um     &trans    &u_um     &trans                          &trans    &trans    &trans    &trans    &ss       &trans
+    &trans    &a_um     &o_um     &trans    &u_um     &trans                          &trans    U_MS_L    U_MS_D    U_MS_R    &ss       &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans    &to GAMING
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    U_WH_L    U_WH_R    U_BTN3    &trans    &to GAMING
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans
+                                  &trans    &trans    &trans    &trans      U_BTN1    U_BTN2    &trans    &trans
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};
@@ -99,7 +101,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B     &none       &none     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &none     &none     &none     &kp SPACE   &kp SPACE &kp RET  &mo MACROS &to DVORAK
+                                  &trans    &trans    &none     &kp SPACE   &kp SPACE &kp RET  &mo MACROS &to DVORAK
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>; 
 		};
