@@ -17,7 +17,8 @@
 #define GAMING  4
 
 #define SEMI_MED &semi_med MEDIA 0
-#define DASH_SYM &dash_sym SYMBOLS MINUS
+#define DASH_SYM &mo_kp SYMBOLS MINUS
+#define SLASH_MAC &mo_kp MACROS SLASH
 #define Z_MED &z_med MEDIA 0
 #define BT(profile) &bt BT_SEL profile
 #define MT_MACROS &mo_tog MACROS MACROS
@@ -31,7 +32,7 @@
 // ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
     &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSLH
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp TAB   &SQT_Q    &COMMA_W  &DOT_E    &P_R      &Y_T                            &F_Y      &G_U      &C_I      &R_O      &L_P      &kp SLASH
+    &kp TAB   &SQT_Q    &COMMA_W  &DOT_E    &P_R      &Y_T                            &F_Y      &G_U      &C_I      &R_O      &L_P      SLASH_MAC
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LSHFT &kp A     &O_S      &E_D      &U_F      &I_G                            &D_H      &H_J      &T_K      &N_L      &S_SEMI   DASH_SYM
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤

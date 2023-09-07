@@ -11,14 +11,6 @@
             tapping-term-ms = <175>;
             bindings = <&mo>, <&SEMI_Z>;
         };
-        dash_sym: dash_symbols_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DASH_SYMBOLS_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <175>;
-            bindings = <&mo>, <&kp>;
-        };
         z_med: z_media_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "Z_MEDIA_HOLD_TAP";
@@ -26,6 +18,14 @@
             flavor = "balanced";
             tapping-term-ms = <175>;
             bindings = <&mo>, <&Z_SLASH>;
+        };
+        mo_kp: layer_key_press_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_KEY_PRESS_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <175>;
+            bindings = <&mo>, <&kp>;
         };
         kp_kp_hold_tap: kp_kp_hold_tap {
             compatible = "zmk,behavior-hold-tap";
