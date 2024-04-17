@@ -84,9 +84,9 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &a_um     &o_um     &trans    &u_um     &trans                          &trans    U_MS_L    U_MS_D    U_MS_R    &ss       &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    U_WH_L    U_WH_R    U_BTN3    &trans    &to GAMING
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    U_WH_L    U_WH_R    &mkp MB3  &trans    &to GAMING
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &trans    &trans    &trans    &trans      U_BTN1    U_BTN2    &to DVORAK &trans
+                                  &trans    &trans    &trans    &trans      &mkp MB1  &mkp MB2 &to DVORAK &trans
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};
