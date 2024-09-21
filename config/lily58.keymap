@@ -10,16 +10,19 @@
 #include "custom_behaviors.dtsi"
 #include "mouse.dtsi"
 
-#define DVORAK  0
-#define SYMBOLS 1
-#define MEDIA   2
-#define MACROS  3
-#define GAMING  4
+#define DVORAK       0
+#define DVORAKQWERTY 1
+#define SYMBOLS      2
+#define MEDIA        3
+#define MACROS       4
+#define GAMING       5
 
-#define SEMI_MED &semi_med MEDIA 0
+#define SEMI_MED &mo_kp MEDIA SEMI
+#define Z_MED &mo_kp MEDIA Z
+#define SEMI_MED_Q &semi_med_q MEDIA 0
+#define Z_MED_Q &z_med_q MEDIA 0
 #define DASH_SYM &mo_kp SYMBOLS MINUS
 #define SLASH_MAC &mo_kp MACROS SLASH
-#define Z_MED &z_med MEDIA 0
 #define BT(profile) &bt BT_SEL profile
 #define MT_MACROS &mo_tog MACROS MACROS
 
@@ -27,7 +30,23 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		default_layer {
+        default_layer {
+			bindings = <
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+    &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSLH
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+    &kp TAB   &kp SQT  &kp COMMA &kp PERIOD &kp P     &kp Y                           &kp F     &kp G     &kp C     &kp R     &kp L     SLASH_MAC
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+    &kp LSHFT &kp A     &kp O     &kp E     &kp U     &kp I                           &kp D     &kp H     &kp T     &kp N     &kp S     DASH_SYM
+// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+    &kp LCTRL SEMI_MED  &kp Q     &kp J     &kp K     &kp X    &to MEDIA  &to SYMBOLS &kp B     &kp M     &kp W     &kp V     Z_MED     &kp RSHFT
+// └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
+                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   MT_MACROS &to DVORAKQWERTY
+                              // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
+			>; 
+		};
+
+		dvorak_qwerty_layer {
 			bindings = <
 // ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
     &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSLH
@@ -36,7 +55,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LSHFT &kp A     &O_S      &E_D      &U_F      &I_G                            &D_H      &H_J      &T_K      &N_L      &S_SEMI   DASH_SYM
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp LCTRL SEMI_MED  &Q_X      &J_C      &K_V      &X_B     &to MEDIA  &to SYMBOLS &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED     &kp RSHFT
+    &kp LCTRL SEMI_MED_Q &Q_X     &J_C      &K_V      &X_B     &to MEDIA  &to SYMBOLS &B_N      &kp M     &W_COMMA  &V_DOT    Z_MED_Q   &kp RSHFT
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                   &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   MT_MACROS &to DVORAK
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
@@ -86,7 +105,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    U_WH_L    U_WH_R    &mkp MB3  &trans    &to GAMING
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &trans    &trans    &trans    &trans      &mkp MB1  &mkp MB2 &to DVORAK &trans
+                                  &trans    &trans    &trans    &trans      &mkp MB1  &mkp MB2 &to DVORAK &to DVORAKQWERTY
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};

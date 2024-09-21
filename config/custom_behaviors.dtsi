@@ -3,7 +3,7 @@
 
 / {
     behaviors {
-        semi_med: semicolon_media_hold_tap {
+        semi_med_q: semicolon_media_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "SEMICOLON_MEDIA_HOLD_TAP";
             #binding-cells = <2>;
@@ -11,7 +11,7 @@
             tapping-term-ms = <175>;
             bindings = <&mo>, <&SEMI_Z>;
         };
-        z_med: z_media_hold_tap {
+        z_med_q: z_media_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "Z_MEDIA_HOLD_TAP";
             #binding-cells = <2>;
