@@ -69,7 +69,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &kp GRAVE &kp EQUAL &kp LBRC  &kp RBRC  &trans                          &kp SQT   &kp DQT   &kp UP    &kp LT    &kp GT    &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &trans    &kp TILDE &kp PLUS  &kp LPAR  &kp RPAR  &trans                          &kp PSCRN &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_UP &trans
+    &trans    &kp TILDE &kp KP_PLUS &kp LPAR &kp RPAR &trans                          &kp PSCRN &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_UP &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &kp COLON &kp SEMI  &kp LBKT  &kp RBKT  &trans    &trans      &trans    &kp K_APP &kp HOME  &kp END   &trans	  &kp PG_DN &trans
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
