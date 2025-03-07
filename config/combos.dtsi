@@ -1,60 +1,95 @@
-#include <dt-bindings/zmk/keys.h>
-#include "macros.dtsi"
+/* ┌────┬────┬────┬────┬────┬────┐           ┌────┬────┬────┬────┬────┬────┐
+   | 0    1    2    3    4    5  |           | 6    7    8    9    10   11 |
+   | 12   13   14   15   16   17 |           | 18   19   20   21   22   23 |
+   | 24   25   26   27   28   29 └────┐ ┌────┘ 30   31   32   33   34   35 |
+   | 36   37   38   39   40   41   42 | | 43   44   45   46   47   48   49 |
+   └────┴────┴────┐ 50   51   52   53 | | 54   55   56   57 ┌────┴────┴────┘
+                  └────┴────┴────┴────┘ └────┴────┴────┴────┘ */
 
-// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
-//  0         1         2         3         4         5                               6         7         8         9         10        11
-// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-//  12        13        14        15        16        17                              18        19        20        21        22        23
-// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-//  24        25        26        27        28        29                              30        31        32        33        34        35
-// ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-//  36        37        38        39        40        41        42          43        44        45        46        47        48        49
-// └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                              //  50        51        52        53          54        55        56        57
-                              // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
+// ZMK_COMBO(name, bindings, keys, layers, combo_timeout = 50, combo_idle = -1, combo_vaargs)
+
+#define TIMEOUT_FAST 18
+#define TIMEOUT_SLOW 30
+
+#define IDLE_FAST 50
+#define IDLE_SLOW 30
+
+// Random combos
+ZMK_COMBO(caps, &kp CAPS, 24 25)
+
+// Fast symbols left hand
+ZMK_COMBO(double_quote, &kp DQT, 13 14)
+ZMK_COMBO(grave, &kp GRAVE, 25 26)
+ZMK_COMBO(tilde, &kp TILDE, 25 27)
+ZMK_COMBO(colon, &kp COLON, 37 38)
+
+ZMK_COMBO(l_angle, &kp LESS_THAN, 14 15)
+ZMK_COMBO(r_angle, &kp GREATER_THAN, 15 16)
+
+// Fast symbols right hand
+ZMK_COMBO(l_brace, &kp LBRC, 19 20)
+ZMK_COMBO(r_brace, &kp RBRC, 20 21)
+ZMK_COMBO(l_paren, &kp LPAR, 31 32, DVORAK, TIMEOUT_FAST, IDLE_FAST) // this is th so rolled very quickly in normal typing
+ZMK_COMBO(r_paren, &kp RPAR, 32 33)
+ZMK_COMBO(l_bracket, &kp LBKT, 45 46)
+ZMK_COMBO(r_bracket, &kp RBKT, 46 47)
+
+ZMK_COMBO(plus, &kp PLUS, 21 22)
+ZMK_COMBO(equals, &kp EQUAL, 33 34)
+ZMK_COMBO(underscore, &kp UNDERSCORE, 33 35)
+
+// Fast macros
+ZMK_COMBO(elixir_pipe, &elixir_pipe, 11 15) // \| and .> keys
+ZMK_COMBO(l_dash_arrow, &l_dash_arrow, 14 35)
+ZMK_COMBO(r_dash_arrow, &r_dash_arrow, 15 35)
+ZMK_COMBO(l_equals_arrow, &l_equals_arrow, 14 34)
+ZMK_COMBO(r_equals_arrow, &r_equals_arrow, 15 34)
+
+// common keyboard shortcuts
+ZMK_COMBO(undo, &kp LC(Z), 26 37)
+ZMK_COMBO(redo, &kp LC(Y), 33 48)
+
+ZMK_COMBO(copy, &kp LC(C), 38 39)
+ZMK_COMBO(cut, &kp LC(X), 39 40)
+ZMK_COMBO(paste, &kp LC(V), 38 40)
+
+ZMK_COMBO(save, &kp LC(S), 26 27)
+ZMK_COMBO(find, &kp LC(F), 27 28)
+
+// German symbols
+
+
+// F key vertical combos
+ZMK_COMBO(f1, &kp F1, 0 12)
+ZMK_COMBO(f2, &kp F2, 1 13)
+ZMK_COMBO(f3, &kp F3, 2 14)
+ZMK_COMBO(f4, &kp F4, 3 15)
+ZMK_COMBO(f5, &kp F5, 4 16)
+ZMK_COMBO(f6, &kp F6, 5 17)
+ZMK_COMBO(f7, &kp F7, 6 18)
+ZMK_COMBO(f8, &kp F8, 7 19)
+ZMK_COMBO(f9, &kp F9, 8 20)
+ZMK_COMBO(f10, &kp F10, 9 21)
+ZMK_COMBO(f11, &kp F11, 10 22)
+ZMK_COMBO(f12, &kp F12, 11 23)
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_caps {
-            timeout-ms = <50>;
-            key-positions = <24 25>; // LSHIFT A
-            bindings = <&kp CAPS>;  
-        };
-        combo_a_umlaut_upper {
-            timeout-ms = <50>;
-            key-positions = <25 56>; // A, MACROS
-            bindings = <&a_upper_umlaut>;  
-        };
-        combo_o_umlaut_upper {
-            timeout-ms = <50>;
-            key-positions = <26 56>; // O, MACROS
-            bindings = <&o_upper_umlaut>;  
-        };
-        combo_u_umlaut_upper {
-            timeout-ms = <50>;
-            key-positions = <28 56>; // U, MACROS
-            bindings = <&u_upper_umlaut>;  
-        };
-        combo_r_dash_arrow {
-            timeout-ms = <50>;
-            key-positions = <15 35>;
-            bindings = <&r_dash_arrow>;  
-        };
-        combo_l_dash_arrow {
-            timeout-ms = <50>;
-            key-positions = <14 35>;
-            bindings = <&l_dash_arrow>;  
-        };
-        combo_r_equals_arrow {
-            timeout-ms = <50>;
-            key-positions = <14 15 35>;
-            bindings = <&r_equals_arrow>;  
-        };
-        combo_l_equals_arrow {
-            timeout-ms = <50>;
-            key-positions = <13 14 35>;
-            bindings = <&l_equals_arrow>;  
-        };
-    };
+   combos {
+      compatible = "zmk,combos";
+      combo_a_umlaut_upper {
+         timeout-ms = <50>;
+         key-positions = <25 56>; // A, MACROS
+         bindings = <&a_upper_umlaut>;  
+      };
+      combo_o_umlaut_upper {
+         timeout-ms = <50>;
+         key-positions = <26 56>; // O, MACROS
+         bindings = <&o_upper_umlaut>;  
+      };
+      combo_u_umlaut_upper {
+         timeout-ms = <50>;
+         key-positions = <28 56>; // U, MACROS
+         bindings = <&u_upper_umlaut>;  
+      };
+   };
 };

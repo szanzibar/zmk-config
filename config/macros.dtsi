@@ -1,122 +1,16 @@
-#include <dt-bindings/zmk/keys.h>
+// German symbols (windows)
+ZMK_MACRO(a_um, bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N3 &kp KP_N2>, <&macro_release &kp LALT>;)
+ZMK_MACRO(o_um, bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N4 &kp KP_N8>, <&macro_release &kp LALT>;)
+ZMK_MACRO(u_um, bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N9>, <&macro_release &kp LALT>;)
+ZMK_MACRO(ss, bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N2 &kp KP_N2 &kp KP_N5>, <&macro_release &kp LALT>;)
 
-/ {
-    macros {
-        a_um: a_lower_umlaut {
-            label = "a_lower_umlaut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N1 &kp KP_N3 &kp KP_N2>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        a_upper_umlaut: a_upper_umlaut {
-            label = "a_upper_umlaut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N2>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        o_um: o_lower_umlaut {
-            label = "o_lower_umlaut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N8>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        o_upper_umlaut: o_upper_umlaut {
-            label = "o_upper_umlaut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N3>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        u_um: u_lower_umlaut {
-            label = "u_lower_umlaut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N9>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        u_upper_umlaut: u_upper_umlaut {
-            label = "u_upper_umlaut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N4>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        ss: sharp_s {
-            label = "sharp_s";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N2 &kp KP_N2 &kp KP_N5>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        r_dash_arrow: r_dash_arrow {
-            label = "r_dash_arrow";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings = <&kp MINUS &kp GREATER_THAN>;
-        };
-        l_dash_arrow: l_dash_arrow {
-            label = "l_dash_arrow";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings = <&kp LESS_THAN &kp MINUS>;
-        };
-        r_equals_arrow: r_equals_arrow {
-            label = "r_equals_arrow";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings = <&kp EQUAL &kp GREATER_THAN>;
-        };
-        l_equals_arrow: l_equals_arrow {
-            label = "l_equals_arrow";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
-            bindings = <&kp LESS_THAN &kp EQUAL>;
-        };
-    };
-};
+ZMK_MACRO(a_upper_umlaut, bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N4 &kp KP_N2>, <&macro_release &kp LALT>;)
+ZMK_MACRO(o_upper_umlaut, bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N5 &kp KP_N3>, <&macro_release &kp LALT>;)
+ZMK_MACRO(u_upper_umlaut, bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N1 &kp KP_N5 &kp KP_N4>, <&macro_release &kp LALT>;)
+
+// common multi character symbols/ligatures
+ZMK_MACRO(elixir_pipe, bindings = <&kp PIPE &kp GREATER_THAN>;)
+ZMK_MACRO(l_dash_arrow, bindings = <&kp LESS_THAN &kp MINUS>;)
+ZMK_MACRO(r_dash_arrow, bindings = <&kp MINUS &kp GREATER_THAN>;)
+ZMK_MACRO(l_equals_arrow, bindings = <&kp LESS_THAN &kp EQUAL>;)\
+ZMK_MACRO(r_equals_arrow, bindings = <&kp EQUAL &kp GREATER_THAN>;)

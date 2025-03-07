@@ -1,6 +1,6 @@
-// Behaviors for dvorak layout, qwerty keyboard shortcuts
+// ⚠️⚠️⚠️ I no longer convert to qwerty layout when using modifiers, but keeping this file for now for documentation's sake
 
-#include <dt-bindings/zmk/keys.h>
+// Behaviors for dvorak layout, qwerty keyboard shortcuts
 
 / {
 	behaviors {
