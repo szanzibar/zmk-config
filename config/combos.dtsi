@@ -8,11 +8,9 @@
 
 // ZMK_COMBO(name, bindings, keys, layers, combo_timeout = 50, combo_idle = -1, combo_vaargs)
 
-#define TIMEOUT_FAST 18
-#define TIMEOUT_SLOW 30
+#define SHORTER_TIMEOUT 18 // default is 50ms
 
-#define IDLE_FAST 50
-#define IDLE_SLOW 30
+#define LONGER_IDLE 50 // default is disabled
 
 // Random combos
 ZMK_COMBO(caps, &kp CAPS, 24 25)
@@ -29,13 +27,13 @@ ZMK_COMBO(r_angle, &kp GREATER_THAN, 15 16)
 // Fast symbols right hand
 ZMK_COMBO(l_brace, &kp LBRC, 19 20)
 ZMK_COMBO(r_brace, &kp RBRC, 20 21)
-ZMK_COMBO(l_paren, &kp LPAR, 31 32, DVORAK, TIMEOUT_FAST, IDLE_FAST) // this is th so rolled very quickly in normal typing
-ZMK_COMBO(r_paren, &kp RPAR, 32 33)
+ZMK_COMBO(l_paren, &kp LPAR, 31 32, DVORAK, SHORTER_TIMEOUT, LONGER_IDLE) // this is th so rolled very quickly in normal typing
+ZMK_COMBO(r_paren, &kp RPAR, 32 33, DVORAK, SHORTER_TIMEOUT, LONGER_IDLE)
 ZMK_COMBO(l_bracket, &kp LBKT, 45 46)
 ZMK_COMBO(r_bracket, &kp RBKT, 46 47)
 
 ZMK_COMBO(plus, &kp PLUS, 21 22)
-ZMK_COMBO(equals, &kp EQUAL, 33 34)
+ZMK_COMBO(equals, &kp EQUAL, 33 34, DVORAK, SHORTER_TIMEOUT, LONGER_IDLE)
 ZMK_COMBO(underscore, &kp UNDERSCORE, 33 35)
 
 // Fast macros
