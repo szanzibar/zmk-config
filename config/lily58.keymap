@@ -22,7 +22,6 @@
 #define DASH_SYM &mo_kp SYMBOLS MINUS
 #define SLASH_MAC &mo_kp MACROS SLASH
 #define BT(profile) &bt BT_SEL profile
-#define MT_MACROS &mo_tog MACROS MACROS
 
 / {
 	keymap {
@@ -37,9 +36,9 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LSHFT &kp A     &kp O     &kp E     &kp U     &kp I                           &kp D     &kp H     &kp T     &kp N     &kp S     DASH_SYM
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp LCTRL SEMI_MED  &kp Q     &kp J     &kp K     &kp X    &to MEDIA  &to SYMBOLS &kp B     &kp M     &kp W     &kp V     Z_MED     &kp RSHFT
+    &kp LCTRL SEMI_MED  &kp Q     &kp J     &kp K     &kp X    &to GAMING  &to DVORAK &kp B     &kp M     &kp W     &kp V     Z_MED     &kp RSHFT
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &kp LGUI  &kp LALT  &kp DEL   &kp BSPC    &kp SPACE &kp RET   MT_MACROS &to DVORAK
+                                  &kp LALT  &kp LGUI  &kp DEL   &kp BSPC    &kp SPACE &kp RET   &kp RGUI  &kp RALT
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>; 
 		};
@@ -71,7 +70,7 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans     &trans   &kp KP_DOT &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT  &trans
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &trans    &trans    &trans    &trans      &trans    &trans    &kp KP_N0 &trans
+                                  &trans    &trans    &trans    &trans      &trans    &trans    &kp KP_N0 &none
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};
@@ -85,9 +84,9 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &trans    &a_um     &o_um     &trans    &u_um     &trans                          &trans    U_MS_L    U_MS_D    U_MS_R    &ss       &trans
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    U_WH_L    U_WH_R    &mkp MB3  &trans    &to GAMING
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    U_WH_L    U_WH_R    &mkp MB3  &trans    &trans
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &trans    &trans    &trans    &trans      &mkp MB1  &mkp MB2 &to DVORAK &to DVORAK
+                                  &trans    &trans    &trans    &trans      &mkp MB1  &kp RET   &mkp MB2  &none
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>;
 		};
@@ -101,9 +100,9 @@
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LSHFT &kp A     &kp S     &kp D     &kp F     &kp G                           &kp H     &kp LEFT  &kp DOWN  &kp RIGHT &kp SEMI  &none
 // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐ ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B     &none       &none     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
+    &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B     &trans      &trans    &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &none
 // └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                  &trans    &trans    &none     &kp SPACE   &kp SPACE &kp RET  &mo MACROS &to DVORAK
+                                  &trans    &trans    &none     &kp SPACE   &kp SPACE &kp RET   &none     &none
                               // └─────────┴─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┴─────────┘
 			>; 
 		};

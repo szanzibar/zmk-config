@@ -17,8 +17,8 @@ ZMK_COMBO(caps, &kp CAPS, 24 25)
 
 // Fast symbols left hand
 ZMK_COMBO(double_quote, &kp DQT, 13 14)
-ZMK_COMBO(grave, &kp GRAVE, 25 26)
-ZMK_COMBO(tilde, &kp TILDE, 25 27)
+ZMK_COMBO(grave, &kp GRAVE, 25 26, DVORAK, SHORTER_TIMEOUT, LONGER_IDLE)
+ZMK_COMBO(tilde, &kp TILDE, 25 27, DVORAK, SHORTER_TIMEOUT, LONGER_IDLE)
 ZMK_COMBO(colon, &kp COLON, 37 38)
 
 ZMK_COMBO(l_angle, &kp LESS_THAN, 14 15)
@@ -44,15 +44,16 @@ ZMK_COMBO(l_equals_arrow, &l_equals_arrow, 14 34)
 ZMK_COMBO(r_equals_arrow, &r_equals_arrow, 15 34)
 
 // common keyboard shortcuts
-ZMK_COMBO(undo, &kp LC(Z), 26 37)
-ZMK_COMBO(redo, &kp LC(Y), 33 48)
+// TODO: create windows layer
+ZMK_COMBO(undo, &kp LG(Z), 26 37)
+ZMK_COMBO(redo, &kp LG(Y), 33 48)
 
-ZMK_COMBO(copy, &kp LC(C), 38 39)
-ZMK_COMBO(cut, &kp LC(X), 39 40)
-ZMK_COMBO(paste, &kp LC(V), 38 40)
+ZMK_COMBO(copy, &kp LG(C), 38 39)
+ZMK_COMBO(cut, &kp LG(X), 39 40)
+ZMK_COMBO(paste, &kp LG(V), 38 40)
 
-ZMK_COMBO(save, &kp LC(S), 26 27)
-ZMK_COMBO(find, &kp LC(F), 27 28)
+ZMK_COMBO(save, &kp LG(S), 26 27, DVORAK, SHORTER_TIMEOUT, LONGER_IDLE)
+ZMK_COMBO(find, &kp LG(F), 27 28, DVORAK, SHORTER_TIMEOUT, LONGER_IDLE)
 
 // German symbols
 
